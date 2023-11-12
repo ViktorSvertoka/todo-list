@@ -181,6 +181,10 @@ function handleListClick(event) {
 // Функція для відновлення завдань з локального сховища при завантаженні сторінки
 function restoreTasksFromLocalStorage() {
   const tasks = getTasksFromLocalStorage();
+
+  // Очищаємо список перед додаванням завдань
+  refs.list.innerHTML = '';
+
   tasks.forEach(taskObj => {
     const taskMarkup = createMarkup(taskObj);
     refs.list.insertAdjacentHTML('beforeend', taskMarkup);
