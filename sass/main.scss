@@ -12,12 +12,17 @@ body {
 .list-btn {
   list-style: none;
   display: flex;
-  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
   gap: 32px;
   padding: 0;
   margin-bottom: 60px;
   border-bottom: 2px solid #e3e3e3;
   padding-bottom: 20px;
+
+  @media screen and (min-width: 768px) {
+    flex-direction: row;
+  }
 }
 
 .btn {
@@ -29,6 +34,7 @@ body {
   padding: 0 20px;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 
 .container {
@@ -45,8 +51,13 @@ body {
 .js-form {
   display: flex;
   flex-direction: column;
-  width: 500px;
+  width: 320px;
   gap: 10px;
+  width: 320px;
+
+  @media screen and (min-width: 768px) {
+    width: 500px;
+  }
 }
 
 .js-input {
@@ -61,6 +72,7 @@ body {
   border-radius: 10px;
   padding: 10px;
   border: 2px solid #cccccc;
+  cursor: pointer;
 }
 
 .js-btn {
@@ -71,6 +83,7 @@ body {
   border: none;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
 }
 
 .js-list {
@@ -82,14 +95,19 @@ body {
 }
 
 .item {
-  width: 600px;
+  width: 300px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 30px;
+  gap: 10px;
   border: 2px solid #cccccc;
   border-radius: 10px;
   padding: 10px;
+
+  @media screen and (min-width: 768px) {
+    width: 600px;
+    gap: 30px;
+  }
 }
 
 .through-text {
@@ -113,6 +131,8 @@ body {
   border: none;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .remove-btn {
@@ -124,6 +144,8 @@ body {
   border: none;
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  white-space: nowrap;
 }
 
 .description {

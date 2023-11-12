@@ -136,6 +136,20 @@ function handleFormSubmit(event) {
 
   const { description, priority } = event.target.elements;
 
+  // Видаляємо пробіли з початку та кінця введеного тексту
+  const descriptionValue = description.value.trim();
+
+  // Перевірка на порожнє поле
+  if (descriptionValue === '') {
+    iziToast.warning({
+      title: 'Warning',
+      message: 'Please, fill the main field',
+      position: 'topRight',
+      color: 'yellow',
+    });
+    return; // Зупиняємо подальше виконання обробки події
+  }
+
   // Створюємо об'єкт завдання на основі даних з форми
   const taskObj = {
     id: Date.now(),
