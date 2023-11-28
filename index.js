@@ -79,6 +79,13 @@ function markTaskAsDone(taskId) {
     tasks[taskIndex].done = true;
     setTasksInLocalStorage(tasks);
   }
+
+  iziToast.success({
+    title: 'Success',
+    message: 'Task is done',
+    position: 'topRight',
+    color: 'green',
+  });
 }
 
 // Функція для видалення завдання з локального сховища
@@ -86,6 +93,13 @@ function removeTaskFromLocalStorage(taskId) {
   const tasks = getTasksFromLocalStorage();
   const updatedTasks = tasks.filter(task => task.id !== parseInt(taskId));
   setTasksInLocalStorage(updatedTasks);
+
+  iziToast.info({
+    title: 'Info',
+    message: 'Task is remove',
+    position: 'topRight',
+    color: 'blue',
+  });
 }
 
 // Функція для оновлення стану відображення завдання
