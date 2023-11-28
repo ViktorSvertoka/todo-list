@@ -1,6 +1,6 @@
 body {
   font-family: "Open Sans", sans-serif;
-  padding: 80px;
+  padding: 20px;
 }
 
 .header-wrap {
@@ -27,7 +27,7 @@ body {
           justify-content: space-between;
   gap: 32px;
   padding: 0;
-  margin-bottom: 60px;
+  margin-bottom: 20px;
   border-bottom: 2px solid #e3e3e3;
   padding-bottom: 20px;
 }
@@ -88,7 +88,7 @@ body {
 }
 @media screen and (min-width: 768px) {
   .js-form {
-    width: 500px;
+    width: 620px;
   }
 }
 
@@ -195,12 +195,15 @@ body {
 .description {
   font-size: 20px;
   font-weight: 600;
+  overflow-x: hidden;
+  overflow-y: auto;
 }
 
 .priority {
   font-size: 20px;
   font-weight: 600;
   color: #8e8e8e;
+  padding-left: 10px;
 }
 
 .wrap1 {
